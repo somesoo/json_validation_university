@@ -1,0 +1,64 @@
+{
+    "Boards": [
+        {
+            "ID": "0x100001",
+            "Name": "PiBox"
+        },
+        {
+            "ID": "0x10001",
+            "Name": "PiBox2"
+        },
+        {
+            "ID": "0x0002",
+            "Name": "Steering wheel"
+        },
+        {
+            "ID": "0x0010",
+            "Name": "Battery 1"
+        },
+        {
+            "ID": "0x0011",
+            "Name": "Battery 2"
+        }
+    ],
+    "Parameters": [
+        {
+            "ID": "0x0001",
+            "Name": "Heartbeat", 
+            "Type": "uint32"
+        },
+        {
+            "MinID": "0x0012",
+            "MaxID": "0x004F",
+            "Name": "Binary channel <x>", 
+            "Type": "bool"
+        },
+        {
+            "MinID": "0x0050",
+            "MaxID": "0x008F",
+            "Name": "Voltage channel <x>",
+            "Type": "float"
+        },
+        {
+            "MinID": "0x0090",
+            "MaxID": "0x00CF",
+            "Name": "Current channel <x>", 
+            "Type": "float"
+        },
+        {
+            "ID": "0x10011",
+            "Name": "Latitude",
+            "Type": "float"
+        },
+        {
+            "ID": "0x0101",
+            "Name": "Longitude",
+            "Type": "float"
+        },
+        {
+            "ID": "0x0102",
+            "Name": "Altitude",
+            "Type": "float"
+        }
+    ]
+}

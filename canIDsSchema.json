@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "Boards": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "type": "string",
+                        "pattern": "^(0[xX])[A-Fa-f0-9]+$"
+                    },
+                    "Name": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "ID",
+                    "Name"
+                ]
+            }
+        },
+        "Parameters": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "type": "string",
+                        "pattern": "^(0[xX])[A-Fa-f0-9]+$"
+                    },
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Type": {
+                        "type": "string",
+                        "enum": [
+                            "uint32",
+                            "bool",
+                            "float"
+                        ]
+                    },
+                    "MinID": {
+                        "type": "string",
+                        "pattern": "^(0[xX])[A-Fa-f0-9]+$"
+                    },
+                    "MaxID": {
+                        "type": "string",
+                        "pattern": "^(0[xX])[A-Fa-f0-9]+$"
+                    }
+                },
+                "oneOf": [
+                    {
+                        "required": [
+                            "ID",
+                            "Name",
+                            "Type"
+                        ]
+                    },
+                    {
+                        "required": [
+                            "MinID",
+                            "MaxID",
+                            "Name",
+                            "Type"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "required": [
+        "Boards",
+        "Parameters"
+    ]
+}
